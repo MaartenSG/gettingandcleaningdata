@@ -8,13 +8,13 @@ The complete dataset was downloaded from https://d396qusza40orc.cloudfront.net/g
 
 This repo contains 4 files required for the assignment
 - **CodeBook.md** contains the description of the data, the variables in the data and the data  processing steps. Processing of the mobility dataset to obtain the tidy dataset was done via the following steps:
-1. Merge the train and test sets
-2. Extract mean and sd related measurements
-3. Add activities descriptions to the dataset
-4. Add variable labels
-5. Export a tidy dataset with the variable average for each activity and subject combination
+..1. Merge the train and test sets
+..2. Extract mean and sd related measurements
+..3. Add activities descriptions to the dataset
+..4. Add variable labels
+..5. Export a tidy dataset with the variable average for each activity and subject combination
 - **run_analysis.R** contains the actual R code which was used in the data processing
-- **tidy_dataset.csv** is the resulting dataset. This dataset can be read into R via read.csv(“”)
+- **tidy_dataset.csv** is the resulting dataset. 
 - **README.md** is the current readme file
 
 
