@@ -77,7 +77,7 @@ td <- summarize_at(datad, vars(tBodyAccmeanX:fBodyGyroJerkMagstd), mean)
 #td <- group_by(td, activity)
 #td2 <- summarize_at(td, vars(tBodyAccmeanX:fBodyGyroJerkMagstd), mean)
 
-write.csv(td, "tidy_dataset.csv")
+write.table(td, "tidy_dataset.txt", row.name=FALSE)
 
 #----------------------------------------------------------------------------------
 # the following are examples of how to extract variable types from this dataset

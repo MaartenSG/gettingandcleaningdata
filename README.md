@@ -14,7 +14,7 @@ This repo contains 4 files required for the assignment
   4. Add variable labels
   5. Export a tidy dataset with the variable average for each activity and subject combination
 - **run_analysis.R** contains the actual R code which was used in the data processing
-- **tidy_dataset.csv** is the resulting dataset. 
+- **tidy_dataset.txt** is the resulting dataset. 
 - **README.md** is the current readme file
 
 

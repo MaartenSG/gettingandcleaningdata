@@ -67,5 +67,5 @@ The only variable type that is complete (there is an observation for every varia
 - then write the table to the project directory
 - the R script contains extra example code of how to extract the calculation variable type and both the calculation and domain variable types from (a subset of) the dataset.
 
-The resulting tidy_dataset.csv is now available in this repo and can directly be viewed.
+The resulting tidy_dataset.txt is now available in this repo and can directly be viewed.
 
