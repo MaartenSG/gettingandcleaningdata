@@ -1,7 +1,6 @@
-**CodeBook for the Getting and Cleaning Data course Project**
+# CodeBook for the Getting and Cleaning Data course Project
 
-*The course project is to tidy and process a messy dataset.*
-
+The course project goal is to tidy and process a messy dataset.
 Tidy data principles as used in this project,
 - One observation per row
 - Each column represents a variable or measure or characteristic
@@ -10,7 +9,7 @@ Tidy data principles as used in this project,
 - See Wickam’s pdf at http://vita.had.co.nz/papers/tidy-data.pdf
 
 
-*The Data:*
+**The Data:**
 
 The dataset.zip contains mobility measurement data of 30 subjects who are divided in a training and a test set. 
 Both training and test dataset contain files with:
@@ -25,7 +24,7 @@ In addition there are files with:
 - variable labels (feature.txt)
 - activity descriptions (activity_labels.txt)
 
-*Project step 1: merge the train and test sets*
+**Project step 1: merge the train and test sets**
 
 I’ll use the processed datasets (X_*.txt) with the labels to generate a combined dataset.
 See run.analysis.R for exact R code
@@ -36,7 +35,7 @@ See run.analysis.R for exact R code
 - combine train and test data by rows as they should have the same number of columns
 - add column names (use features.txt) and handle duplicate column names by adding the column number to the column names.
 
-*Project step 2: Extract mean and sd related measurements*
+**Project step 2: Extract mean and sd related measurements**
 
 Fairly straightforward, use the combined dataset and select the id columns and the columns with -mean and -std in their name
 - use dplyr pipe structure with select to select the subject and activity id columns and the columns that match -mean or -std
@@ -44,7 +43,7 @@ Fairly straightforward, use the combined dataset and select the id columns and t
 - remove unwanted characters like - and ( and ) and trailing numbers from column names using gsub()
 - bring into the dplyr data structure with tbl_df for easy printing
 
-*Project step 3: Add activities descriptions to the dataset*
+**Project step 3: Add activities descriptions to the dataset**
 
 Use the activity descriptions in the activity_labels.txt file and match them to the activity_id in the dataset
 - read activity_labels.txt and name columns
@@ -52,11 +51,11 @@ Use the activity descriptions in the activity_labels.txt file and match them to 
 - optionally the columns can be reordered to move the new activity column next to activity_id column
 
 
-*Project step 4: Add variable labels*
+**Project step 4: Add variable labels**
 
 Already done during the previous project steps 1-3
 
-*Project part 5: export a tidy dataset with the average variable for each activity and subject*
+**Project part 5: export a tidy dataset with the average variable for each activity and subject**
 
 The dataset created in previous steps is still quite wide with 66 columns that describe measurements. There are several variable types which are still present in the variables. For example 3D directions (X, Y and Z) or domain (time, frequency) or sensor(acc, gyro) or signal (body, gravity). However, as not every column measurement has a time and a frequency domain for example, tidying up (using melt() or gather() would introduce lots of NA values. 
 
