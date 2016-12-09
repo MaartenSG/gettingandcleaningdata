@@ -6,7 +6,7 @@ Tidy data principles as used in this project,
 - Each column represents a variable or measure or characteristic
 - Each type of observational unit forms a table
 - Column names are descriptive names of variables
-- See Wickam’s pdf at http://vita.had.co.nz/papers/tidy-data.pdf
+- See Wickham’s pdf at http://vita.had.co.nz/papers/tidy-data.pdf
 
 
 **The Data:**
@@ -14,7 +14,7 @@ Tidy data principles as used in this project,
 The dataset.zip contains mobility measurement data of 30 subjects who are divided in a training and a test set. 
 Both training and test dataset contain files with:
 - raw accelerometer data (in the Inertial signals folders, not needed for the assignment)
-- a processed dataset for train and test (X_train.txt and X_test.txt)
+- a processed dataset with measurement mean and standard deviation data (X_train.txt and X_test.txt)
 - record labels for the activity within train and test (y_train.txt and y_test.txt)
 - record labels for the subject within train and test (subject_train.txt and subject_test.txt)
 
